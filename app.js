@@ -37,7 +37,7 @@ app.post('/login', (req, res) => {
     const login = req.body?.login;
     const password = md5(req.body?.password);
     try{
-    console.log(Users.findOne({login: login}, (err, user)=>{
+    console.log(Users.findOne({login: login, password: password}, (err, user)=>{
         if(err){
             res.render('login', {title: "Login"})
         }else{

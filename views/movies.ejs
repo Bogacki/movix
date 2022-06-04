@@ -1,0 +1,27 @@
+<%- include("header") %>
+    <body>
+        <%- include("nav") %>
+        <div class="movies__holder">
+          <div class="hero-container">
+        <% movies.forEach((movie) => { %>
+            <% console.log(movie['_id'].toString())%>
+            <div class="main-container">
+                <div class="poster-container">
+                  <a href="/movies/<%=movie['_id'].toString()%>'"><img src="/images/<%=movie['poster']%>" class="poster" /></a>
+                </div>
+                <div class="ticket-container">
+                  <div class="ticket__content">
+                    <h4 class="ticket__movie-title"><%=movie['name']%></h4>
+                    <p class="ticket__movie-slogan">
+                        <%=movie['director']%>
+                    </p>
+                    <p class="ticket__current-price">20.00zł</p>
+                    <a href="/movies/<%=movie['_id'].toString()%>"><button class="ticket__buy-btn">Zarezerwuj bilet</button></a>
+                  </div>
+                </div>
+              </div>
+        <%})%>
+      </div>
+    </div>
+    </body>
+</html>

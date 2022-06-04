@@ -1,19 +1,12 @@
 <%- include("header") %>
-<body>
-    <nav>
-        <div class="logo-container"><img class="logo-icon" src="images/truck_logo.ico" alt=""></div>
-        <div class="menu-container">
-            <ul>
-                <li>Pick movie</li>
-                <li>Your account</li>
-                <li>Logout</li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="block"></div>
-
-
-
-</body>
+    <body>
+        <%- include("nav") %>
+            <div class="movies__section">
+                <button class="movies__btn btn-left"><i class="fas fa-arrow-left"></i></button>
+                <button class="movies__btn btn-right"><i class="fas fa-arrow-right"></i></button>
+                <div class="movies--wrapper">
+                <a href="./views/selectedMovie.php?movieID=33"><div class="movie-item movie-1" data-slide=0></div></a>
+                <a href="./views/selectedMovie.php?movieID=35"><div class="movie-item movie-2" data-slide=0></div></a><a href="./views/selectedMovie.php?movieID=34"><div class="movie-item movie-3" data-slide=0></div></a><a href="./views/selectedMovie.php?movieID=31"><div class="movie-item movie-4" data-slide=0></div></a><a href="./views/selectedMovie.php?movieID=32"><div class="movie-item movie-5" data-slide=0></div></a>
+                </div>
+    </body>
 </html>

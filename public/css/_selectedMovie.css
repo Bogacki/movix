@@ -1,0 +1,71 @@
+.selected__movie{
+    position: relative;
+    display: flex;
+    color: white;
+}
+.selected__movie-poster{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 700px;
+    min-width: 500px;
+}
+
+.selected__movie-info{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 99.3%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.selected__movie-info p{
+    margin-top: 40px;
+    font-size: 1.9rem;
+    padding: 0 5% 0 5%;
+}
+
+
+.selected__movie-info a, .selected__movie-info a:active, .selected__movie-info a:visited{
+    color: rgb(109, 218, 255);
+    text-decoration: none;
+}
+
+.selected__movie-info span{
+    color: lightgray;
+}
+
+.selected__movie-buy{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    padding: 0px 15px;
+    background-color: rgb(220,220,220);
+    border-radius: 30px;
+    transition: all .2s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 5px 10px rgba(255,255,255, .9);
+}
+
+.selected__movie-buy:hover{
+    transform: translateX(-50%) translateY(-4px);
+    box-shadow: 0 10px 10px rgba(255,255,255, .8);
+    border-bottom: 5px solid black;
+    cursor: pointer;
+
+
+}
+
+.selected__movie-buy:active{
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 8px 14px rgba(255,255,255, .9);
+    border-bottom: 2px solid black;
+
+}
+

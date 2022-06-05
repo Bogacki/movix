@@ -7,7 +7,7 @@
             <% console.log(movie['_id'].toString())%>
             <div class="main-container">
                 <div class="poster-container">
-                  <a href="/movies/<%=movie['_id'].toString()%>'"><img src="/images/<%=movie['poster']%>" class="poster" /></a>
+                  <a href="/movies/<%=movie['_id'].toString()%>"><img src="/images/<%=movie['poster']%>" class="poster" /></a>
                 </div>
                 <div class="ticket-container">
                   <div class="ticket__content">
@@ -15,8 +15,8 @@
                     <p class="ticket__movie-slogan">
                         <%=movie['director']%>
                     </p>
-                    <p class="ticket__current-price">20.00zł</p>
-                    <a href="/movies/<%=movie['_id'].toString()%>"><button class="ticket__buy-btn">Zarezerwuj bilet</button></a>
+                    <p class="ticket__current-price">15.00zł</p>
+                    <a href="/movies/<%=movie['_id'].toString()%>"><button class="ticket__buy-btn">Wypożycz</button></a>
                   </div>
                 </div>
               </div>

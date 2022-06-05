@@ -28,6 +28,10 @@ const movieSchema = new mongoose.Schema({
     director: String,
     poster: String,
     length: Number,
+    genre:String,
+    age: Number,
+    cast: Array,
+    year: Number,
 });
 
 const Users = mongoose.model('User', userSchema);
@@ -92,6 +96,15 @@ app.get('/movies', (req, res) => {
     try{
     Movies.find((err,movies)=>{
         if(!err) res.render('movies', {title: "Movies", loggedCookie: checkIfLogged(req), movies: movies});
+    });
+    }catch{}
+});
+
+app.get('/movies/:movieID', (req, res) => {
+    try{
+    console.log(req.params.movieID);
+    Movies.findOne({_id: req.params.movieID},(err,movie)=>{
+        if(!err) res.render('selectedMovie', {title: movie['name'], loggedCookie: checkIfLogged(req), movie: movie});
     });
     }catch{}
 });
